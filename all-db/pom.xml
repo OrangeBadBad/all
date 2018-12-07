@@ -14,7 +14,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>all-db-mysql</module>
-        <module>all-redis</module>
+        <module>all-db-redis</module>
         <module>all-db-mongodb</module>
     </modules>
 

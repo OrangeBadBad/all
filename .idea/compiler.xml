@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="all-common" />
         <module name="all-config-server" />
+        <module name="all-db-mongodb" />
         <module name="all-db-mysql" />
+        <module name="all-db-redis" />
         <module name="blog-server" />
       </profile>
     </annotationProcessing>
