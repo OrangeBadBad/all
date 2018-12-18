@@ -3,6 +3,8 @@ package com.pengzc.blog.controller;
 import com.pengzc.blog.entity.DemoEntity;
 import com.pengzc.blog.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +16,7 @@ import java.util.List;
  * @Auth pengzc
  * @Date 2018/12/2
  **/
-@RestController
+@Controller
 public class DemoController {
 
     @Autowired
@@ -24,8 +26,11 @@ public class DemoController {
      * Demo
      */
     @GetMapping(value = "/demo")
-    public List<DemoEntity> profile() {
+    public String profile(ModelMap modelMap) {
 
-        return demoService.getAll();
+        List result = demoService.getAll();
+        modelMap.addAttribute("test","1111");
+        modelMap.addAttribute("aaa",result);
+        return "hello";
     }
 }
